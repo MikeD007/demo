@@ -1,0 +1,644 @@
+/*=================样式重置部分=================*/
+body,head,footer,
+ul,li,a,h1,h2,h3,
+h4,h5,h6,p,form,
+input{
+		padding: 0;
+		margin: 0;}
+body{font-size: 14px;
+	font-family: "微软雅黑";}
+a,input{
+		outline: none;}
+a{
+	text-decoration: none;}
+img{
+	border: none;
+	max-width: 100%;
+}
+label {
+	color: #666;
+	font-size: 14px;
+    cursor: pointer;
+}
+ul{
+	font-size: 0px;
+	list-style: none;}
+li{font-size: 12px;}
+header,footer{display: block;}
+
+/*=================公共样式部分=================*/
+/*-----------------顶部导航条部分---------------*/
+/*搜索框样式*/
+.search{
+	width: 300px;
+	height: 32px;
+	background-color: white;
+	border: none;
+	display: inline-block;
+	position: relative;
+}
+.search .search_txt{
+	height: 32px;width: 220px;
+	padding: 0 70px 0 10px;
+	border: none;
+	font-size: 14px;color: #999;
+	line-height: 32px;
+	margin: 0;
+	}
+/*去掉IE10+自动显示的叉叉与小眼睛符号*/
+.search_txt::-ms-clear,
+.login-user::-ms-clear,
+.login-pass::-ms-reveal{ display: none; }
+.search .search_submite{
+	height: 32px;width: 44px;
+	border: none;
+	padding: 0;
+	position: absolute;
+	top: 0;right: 0;
+	z-index: 10;
+	background: url(../img/icon/ui-ico.png) no-repeat 0 -120px;
+	outline: none;
+}
+.search .search_submite:hover{
+	background: url(../img/icon/ui-ico.png) no-repeat 0 -152px;
+	background-color: #1BB6A2;
+}
+
+.input_reset{
+	background: url(../img/icon/reset.png) no-repeat;
+	background-size: 14px 14px;
+	background-position: 4px; 
+	position: absolute;
+	top: 0;right: 44px;
+	z-index: 11;
+	margin: 4px 0;
+	width: 24px;
+	height: 24px;
+	display: none;
+}
+.user_box{
+	top: 85px;
+}
+.pass_box{
+	top: 149px;
+}
+/*顶部导航条样式*/
+header{
+	width: 100%;
+	background: rgba(76,113,168,0.8);
+	position: fixed;top: 0;left: 0;
+	z-index: 100;
+}
+.top_warp{
+	width: 1200px;/*自适应宽度*/
+	height: 60px;
+	margin: 0 auto;
+	position: relative;
+	// overflow: hidden;
+}
+.top_warp .top_logo{
+	display: inline-block;
+	height:34px;
+	margin-top: 13px;
+	float: left;
+}
+.top_warp .search{
+	/*显示设备屏幕过小时，隐藏该控件*/
+	display: inline-block;
+	vertical-align: middle;	
+	float: left;
+	margin-top: 14px;
+	margin-left: 14px;
+	width: 270px;
+}
+.top_warp .search .search_txt{
+	width: 190px;
+}
+.top_warp nav{
+	display: inline-block;
+	position: absolute;
+	margin-left: -170px;
+	left: 50%;
+	bottom: 0;
+}
+.top_warp nav li{
+	display: inline-block;
+	height: 56px;
+	margin-right: 8px;
+	border-bottom: 4px solid transparent;
+}
+.top_warp nav li a{
+	display: inline-block;
+	line-height: 60px;
+	padding: 0 14px;
+	font-size: 14px;
+	color: white;
+	cursor: pointer;
+}
+.top_warp nav li:hover,
+.top_warp nav li.active{
+	border-bottom: 4px solid #1bb6a2;
+}
+.top_warp nav li:hover a,
+.top_warp nav li.active a{
+	color: #1bb6a2;
+}
+.top_warp .location{
+	line-height: 60px;
+	width: 66px;
+	font-size: 14px;
+	color: white;
+	background: url(../img/icon/ui-ico.png) no-repeat 14px -40px;
+	padding-left: 20px;
+	text-align: center;
+	cursor: pointer;
+	float: right;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	position: relative;
+}
+.top_warp .location span{
+	text-align: left;
+}
+.top_warp .location p{
+	display: none;
+	border-top: 1px solid #1bb6a2;
+	position: absolute;
+	left: 86px;
+	bottom: -3px;
+	z-index: 100;
+	width: 235px;
+	height: 2px;
+}
+.top_warp .location:hover p{
+	display: block;
+}
+.top_warp .location .location_list{
+	display: none;
+	border: 1px solid #1bb6a2;
+	border-top: none;
+	padding: 10px;
+	width: 300px;
+	position: absolute;
+	left: -1px;
+	top: 60px;
+	background: rgba(76,113,168,0.8);
+}
+.top_warp .location:hover .location_list{
+	display: block;
+}
+.top_warp .location .location_list li{
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	color: white;
+	width: 50px;
+	float: left;
+}
+.top_warp .location .location_list li:hover{
+	background-color: rgba(0,0,0,0.1);
+	color: #1bb6a2;
+}
+/*定位靠左样式，未登录使用该属性*/
+.top_warp .cent_locat{
+	position: absolute;
+	left: 50%;
+	margin-left: 170px;
+}
+.top_warp .location:hover{
+	border-color: #1bb6a2;
+	color: #1bb6a2;
+	background: url(../img/icon/ui-ico.png) no-repeat 14px 20px;
+	}
+.top_warp .messages{
+	/*登陆成功后设置该属性为block，显示消息*/
+	display: none;
+	color: white;
+	line-height: 60px;
+	margin-right: 5px;
+	padding-right: 38px;
+	position: relative;
+	cursor: pointer;
+	background: url(../img/icon/ui-ico.png) no-repeat 32px -212px;
+	float: right;
+}
+.top_warp .messages span{
+	color: white;
+	height: 20px;
+	position: absolute;
+	top: 8px;
+	right: 0;
+	background: red;
+	line-height: 20px;
+	border-radius: 50%;
+	font-size: 12px;
+	padding: 2px;
+	font-family: 'Arial' ;
+}
+.top_warp .messages:hover{
+	color: #1bb6a2;
+	background: url(../img/icon/ui-ico.png) no-repeat 32px -254px;
+}
+.top_warp .user{
+	/*登陆成功后设置该属性为block，显示头像*/
+	display: none;
+	width: 40px;
+	height: 40px;
+	float: right;
+	margin-top: 10px;
+	border-radius: 50%;
+	overflow: hidden; 
+	border: 1px solid #1bb6a2;
+}
+.top_warp .user:hover{
+	border-color: white;
+}
+.top_warp .user img{
+	width: 100%;
+	height: 100%;
+}
+.top_warp .top_btn{
+	display: inline-block; 
+	width: 58px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	text-align: center;
+	color: white;
+	border: 1px white solid;
+	border-radius: 1px;
+	margin: 15px 15px 0 0;
+	float: right;
+	cursor: pointer;
+}
+.top_warp .top_btn:hover{
+	color: #1BB6A2;
+	border-color: #1BB6A2;}
+.top_warp div.login{right: 76px;}
+.top_warp a.register{right: 0;
+}
+/*登陆弹窗样式*/
+.login_wrap{
+	width: 318px;
+	height: 498px;
+	background: white;
+	border: 1px solid #eaeaea;
+	position: fixed;
+	top: 55%;left: 50%;
+	margin: -250px 0 0 -165px;
+	z-index: 1000;
+	box-shadow: 3px 3px 30px rgba(0,0,0,0.5);
+	display: none;overflow: hidden;
+}
+.login_top{
+	padding: 40px 30px;
+	border-bottom:1px solid #eee;
+
+}
+.login_top strong{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+	background: url(../img/icon/icon_list.png) no-repeat 0 -160px;
+	cursor: pointer;
+}
+.login_top strong:hover{
+	background: url(../img/icon/icon_list.png) no-repeat 0 -190px;
+}
+.login_wrap h4{
+	margin: 0;
+	color: #747474;
+	font-size: 14px;
+	font-weight: lighter;
+}
+.login_top h4{
+margin-bottom: 20px; 
+}
+.login_btm h4{
+margin-bottom: 15px; 
+}
+.login_top .login-user,.login_top .login-pass{
+	padding-left: 44px;
+	margin-bottom: 20px;
+	width: 212px;
+	height: 38px;
+	border: 2px solid #e1e1e1;
+}
+.login_top .login-user{
+	background:url(../img/icon/icon_list.png) no-repeat -108px -312px;
+}
+.login_top .login-pass{
+	background:url(../img/icon/icon_list.png) no-repeat -108px -350px;
+}
+.login_top label{
+	font-size: 12px;
+	color: #9999b2;
+}
+.login_top a{
+	text-decoration: none;
+	float: right;
+	color: #999;
+	font-size: 12px;
+}
+.login_top .login-btn{
+	width:260px;
+	height: 44px;
+	margin-top: 28px;
+	background: #dc3c00;
+	border: none;
+	font-size: 16px;
+	font-family: '微软雅黑';
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+.login_btm{
+	padding: 20px 30px 50px;
+	border-bottom:1px solid #eee;
+
+}
+.login_btm li{
+	display: inline-block;
+	margin-right: 5px;
+}
+.login_btm ul{
+	margin-bottom: 20px;
+}
+.login_btm span{
+	font-size: 12px;
+	color: #666;
+}
+.login_btm .signup{
+	font-size: 12px;
+	margin-left: 20px;
+}
+
+/*-----------------页面内容条部分---------------*/
+/*按钮样式*/
+.default_btn,
+.left_menu li,
+.active_btn{
+	height: 38px;
+	padding: 0 24px;
+	color: #666;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-family: '微软雅黑';
+	background-color: white;
+	cursor: pointer;
+	outline: none;
+}
+.default_btn:hover,
+.active_btn{
+	color: white;
+	border-color: #4d8be6;
+	background-color: #4d8be6;
+	cursor: pointer;
+}
+.default_selects{
+	display: inline-block;
+	position: relative;
+	color: #666;
+	cursor: pointer;
+}
+.default_selects input{
+	height: 38px;
+	width: 148px;
+	border: 1px solid #ddd;
+	padding: 0 40px 0 10px;
+	border-radius: 2px;
+	color: #666;
+	font-size: 14px;
+	outline: none;
+	background: #fff url(../img/icon/icon_list.png) no-repeat 168px 0px;
+	cursor: pointer;
+}
+.default_selects input:hover{
+	background: #eee url(../img/icon/icon_list.png) no-repeat 168px -40px;
+}
+.default_selects .downbox{
+	display: none;
+	position: absolute;
+	top: 38px;
+	z-index: 20;
+	width: 198px;
+	border: 1px solid #ddd;
+	background: white;
+}
+.default_selects .downbox li{
+	font-size: 14px;
+	padding: 5px 0 5px 10px;
+}
+.default_selects .downbox li:hover{
+	background: #eee;
+}
+/*商品列表*/
+.shop{
+	padding-top: 30px;
+	font-size: 0;
+}
+.wares{
+	width: 210px;
+	height: 260px;
+	margin-left: 12px;
+	display: inline-block;
+}
+.wares .wares_inner{
+	width: 100%;
+	height: 200px;
+	position: relative;
+}
+.wares .wares_inner a{
+	display: inline-block;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+}
+.wares .wares_inner .wares_tips{
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+.wares .wares_inner .wares_tips span{
+	display: inline-block;
+	width: 104px;
+	height: 100%;
+	color: white;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+}
+.wares .wares_inner .wares_tips span:first-child{
+	border-right: 1px solid white;
+	width: 105px;
+}
+.wares h3,
+.wares p{
+	color: #666;
+	line-height: 24px;
+}
+.wares h3{
+	margin-top: 8px;
+	font-size: 14px;
+}
+.wares p{
+	font-size: 12px;
+}
+/*分页样式*/
+.paging{
+	width: 500px;
+	height: 100%;
+	margin: 0 auto;
+	display: inline-block;
+}
+.paging ul{
+	font-size: 0;
+	display: inline-block;
+}
+.paging ul li.item{
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	text-align: center;
+	border: 1px solid #ddd;
+	margin-left: -1px;
+	line-height: 34px;
+}
+.paging ul li.item a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: #666;
+}
+.paging ul li.item:hover a{
+	color: orange;
+}
+.paging ul li.item:hover,
+.paging ul li.active{
+	position: relative;
+	z-index: 2;
+	border-color: orange;
+}
+.paging ul li.active:hover a,
+.paging ul li.active a{
+	color: white;
+	background-color: orange;
+}
+.paging ul li i{
+	font-family: '宋体';
+	font-style: normal;
+}
+.paging ul li.prev,
+.paging ul li.next{
+	width: 70px;
+}
+.paging ul li.prev{
+	margin-right: 5px;
+}
+.paging ul li.next{
+	margin-left: 5px;
+}
+.paging ul li.dot,
+.paging ul li.dot:hover{
+	border:none;
+}
+.paging ul li.dot:hover a{
+	color: #666;
+}
+.paging .total{
+	display: inline-block;
+	line-height: 36px;
+	font-size: 12px;
+	color: #999;
+}
+
+/*-----------------底部页脚条部分---------------*/
+footer{
+	background: #141518;
+	width: 100%;
+}
+footer .ft_cont{
+	height: 260px;
+	margin: 0 auto;
+	width: 956px;
+	position: relative;
+}
+footer .ft_cont_left,footer .ft_cont_right{
+	width: 400px;
+	border-top: 2px solid white;
+	position: absolute;
+	top: 30px;
+	
+}
+footer .ft_cont_left{
+	left: 0;
+}
+footer .ft_cont_left .servicelink{
+	text-align: center;
+	margin-top: 30px;
+}
+footer .ft_cont_left .servicelink li{
+	margin-bottom: 28px;
+}
+footer .ft_cont_left .servicelink li a{
+	color: white;
+	font-size: 14px;
+}
+footer .ft_cont_middle{
+	width: 156px;
+	display: inline-block;
+	position: absolute;
+	top:30px;
+	left: 50%;
+	margin-left: -78px;
+}
+footer .ft_cont_middle p,footer .ft_cont_middle span{
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	display: block;
+}
+footer .ft_cont_middle p{
+	line-height: 2px;
+	margin-bottom: 30px;
+}
+footer .ft_cont_middle span{
+	line-height: 24px;
+}
+footer .ft_cont_right{
+	right: 0;
+}
+footer .ft_cont_right h3{
+	font-size: 18px;
+	text-align: center;
+	color: white;
+	font-weight: 400;
+	line-height: 40px;
+	margin-top: 18px;
+}
+footer .ft_cont_right ul{
+	width: 200px;
+	display: block;
+	margin: 0 auto;
+}
+footer .ft_cont_right ul.contact{
+	background: url(../img/icon/contact_ico.png) no-repeat 6px;
+	margin-bottom: 14px;
+}
+footer .ft_cont_right ul.contact li{
+	width: 38px;height: 40px;
+	display: inline-block;
+	border-radius: 50%;
+	margin: 0 6px;
+}
+footer .ft_cont_right ul span{
+	color: white;
+	font-size: 14px;
+	line-height: 26px;
+	margin-left: 6px;
+}

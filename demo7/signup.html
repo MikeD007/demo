@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册海王扒账号</title>
+		<style type="text/css">
+			body,a,h1,p{
+				padding: 0;margin: 0;font-family: "微软雅黑";}
+			body{background: #eee;
+			}
+			a{text-decoration: none;}
+			.signup_ber{
+				background: rgba(76,113,168,0.8);
+				width: 100%;
+				height: 60px;
+			}
+			.top_nav{
+				width: 1000px;
+				margin: 0 auto;
+			}
+			.top_nav a{
+				margin-top: 14px;
+				display: inline-block;
+			}
+			.top_nav strong{
+				color: white;
+				font-size: 20px;
+				position: relative;
+				font-weight: lighter;
+				top: -4px;
+				margin: 5px;
+			}
+			.top_nav h1{
+				display: inline-block;
+				color: white;
+				font-size: 24px;
+				font-weight: lighter;
+				position: relative;
+				top: -2px;
+			}
+			.top_nav span,.top_nav .login{
+				float: right;
+				margin-top: 30px;
+			}
+			.top_nav span{
+				color: white;
+			}
+			.top_nav .login{
+				color: white;
+			}
+			.top_nav .login:hover{
+				color: cyan;
+			}
+
+			.container{
+				width: 330px;
+				margin: 66px auto;
+				position: relative;
+			}
+			.container input[type="text"],
+			.container input[type="password"]{
+				width: 288px;
+				height: 38px;
+				border: 1px solid #ccc;
+				font-size: 16px;
+				padding: 0 20px;
+				margin-bottom: 30px;
+				color: #666;
+				font-family: '微软雅黑'; 
+				font-weight:lighter;
+			}
+			.container .verify{
+				font-size: 0;
+			}
+			.container .verify input{
+				width: 158px;
+				margin-bottom: 5px;
+			}
+			.container .verify img{
+				height: 40px;
+				width: 118px;
+				float: right;
+			}
+			.container label{
+				color: #333;
+			}
+			.container a{
+				color: #6b89b5;
+			}
+			.container input[type="submit"]{
+				display: block;
+				width: 150px;
+				height: 40px;
+				background: #dc3c00;
+				border: none;
+				color: white;
+				margin: 0 auto;
+				cursor: pointer;
+				margin-top: 70px;
+				font-size: 14px;
+				font-family: '微软雅黑'; 
+			}
+			.container .left_title{
+				position: absolute;
+				top: 0;
+				left: -200px;
+				width: 190px;
+			}
+			.container .left_title label,
+			.container .right_p p{
+				display: block;
+				line-height: 40px;
+				margin-bottom: 30px;
+			}
+			.container .left_title label{
+				text-align: right;
+				color: #666;
+				font-size: 18px;
+			}
+			.container .left_title label span{
+				color: red;
+				position: relative;
+				top: 4px;
+				margin-right: 4px;
+			}
+			.container .right_p{
+				position: absolute;
+				top: 0;
+				right: -200px;
+				width: 180px;
+			}
+			.container .right_p p{
+				font-size: 14px;
+				text-align: left;
+				color: red;
+				display: none;
+			}
+		</style>
+		<link rel="shortcut icon" href="img/picture/favicon48x48.jpg" type="image/x-icon" />
+		<link rel="stylesheet" href="css/public.css">
+	</head>
+	<body>
+		<div class="signup_ber">
+			<div class="top_nav">
+				<a href="index.html"><img src="img/picture/logo-ico.png"></a>
+				<strong>|</strong>
+				<h1>注册海王扒账号</h1>
+				<a class="login" href="index.html">我已注册，直接登陆>></a>
+				<span></span>
+			</div>
+		</div>
+		<div class="container">
+			<form>
+					<input id="user" name="user" class="username" type="text" placeholder="设置用户名" />
+					<input id="email" name="email" class="email" type="text" placeholder="输入您的电子邮箱" />
+					<input id="pass" name="pass" class="pass" type="password" placeholder="设置您的登录密码" />
+					<input id="confirmpass" name="confirmpass" class="confirmpass" type="password" placeholder="再次输入您的登陆密码"/>
+					<div class="verify">
+						<input id="verifycode"  name="verifycode" type="text" placeholder="输入验证码" />	
+						<img src="img/1.jpg">
+					</div>
+					<input id="tick" name="tick" type="checkbox" />
+					<label for="tick">阅读并接受</label>
+					<a href="#">《用户协议》</a>
+					<input type="submit" value="注册" />
+			</form>	
+			<div class="left_title">
+				<label for="user"><span>*</span>用户名</label>
+				<label for="email"><span>*</span>邮箱</label>
+				<label for="pass"><span>*</span>登陆密码</label>
+				<label for="confirmpass"><span>*</span>确认密码</label>
+				<label for="verifycode"><span>*</span>验证码</label>
+			</div>
+			<div class="right_p">
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+		</div>
+		<footer >
+					<div class="ft_cont">
+						<div class="ft_cont_left">
+							<ul class="servicelink">
+								<li><a href="#">关于我们</a></li>
+								<li><a href="#">加入我们</a></li>
+								<li><a href="#">商务合作</a></li>
+								<li><a href="#">意见反馈</a></li>
+							</ul>
+						</div>
+						<div class="ft_cont_middle">
+							<p>欢迎来到海王扒</p>
+							<img src="img/picture/QR.png" alt="" />
+							<span>关注海王扒微信公众号</span>
+						</div>
+						<div class="ft_cont_right">
+							<h3>联系我们</h3>
+							<ul class="contact">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul>
+								<li><span>电话:028-88888888</span></li>
+								<li><span>邮箱:123456@sina.com</span></li>
+								<li><span>地址:成都市武侯区</span></li>
+							</ul>
+						</div>
+					</div>	
+			</footer>
+	</body>
+</html>
