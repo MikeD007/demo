@@ -1,0 +1,332 @@
+@import url('./comment.less');
+// 头部
+.header{
+	background: @mainColor;
+	height: 1.293333rem;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+	.serch{
+		height: 0.88rem;
+		width: 8.36rem;
+		float: right;
+		margin-top: 0.2rem;
+		border-radius: 0.106667rem;
+		text-indent: 0.133333rem;
+		color: #fff;
+		overflow: hidden;
+		position: relative;
+		input{
+			.px2px(16px);
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.3);
+			color: #fff;
+			text-indent: 0.8rem;
+		}
+		span{
+			position: absolute;
+			font-size: 0.5rem;
+			top: 0.1rem;
+		}
+	}
+	.shezhi{
+		color: #fff;
+		font-size: 0.533333rem;
+		line-height: 1.293333rem;
+	}
+
+}
+// 容器
+.container{
+	position: absolute;
+	width: 100%;
+	top: 1.3rem;
+	bottom: 1.3rem;
+}
+// 底部导航
+.foot-nav{
+	position: absolute;
+	height: 1.226667rem;
+	width: 100%;
+	bottom: 0;
+	z-index: 1;
+	overflow: hidden;
+	border-top: 1px solid @borderColor;
+	a{
+		display: block;
+		width: 25%;
+		float: left;
+		text-align: center;
+		color: @textColor;
+		span{
+			.px2px(16px);
+			display: inline-block;
+			padding-top: 0.133333rem;
+		}
+		p{
+			line-height: 0.4rem;
+		}
+		&.active{
+			color: @mainColor;
+		}
+	}
+}
+
+.banner{
+	width: 100%;
+	height: 4.106667rem;
+	overflow: hidden;
+	position: relative;
+	.swiper-container, .swiper-wrapper, img{
+		width: 100%;
+		height: 100%;
+	}
+	.banner-nav{
+		position: absolute;
+		right: 0.266667rem;
+		bottom: 10px;
+		z-index: 10;
+		span{
+			display: block;
+			width: 0.266667rem;
+			height: 0.266667rem;
+			border-radius: 50%;
+			margin-right: 8px;
+			background: #fff;
+			.fl;
+			&.active{
+				background: @mainColor;
+			}
+		}
+
+	}
+}
+
+.navBox{
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	padding-top: 0.266667rem;
+	padding-bottom: 0.133333rem;
+	.nav-list{
+		width: 25%;
+		float: left;
+		display: block;
+		&>div{
+			margin: 0 auto; 
+			width: 1.52rem;
+			height: 1.52rem;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 1.52rem;
+			color: #fff;
+			span{
+				font-size: 0.6rem;
+			}
+			
+		}
+		p{
+			text-align: center;
+			line-height: 0.826667rem;
+			.px2px(12px);
+			color: @textColor;
+			clear: both;
+		}
+		&:nth-of-type(1){
+			&>div{
+				background: #ffb709;
+			}
+		}
+		&:nth-of-type(2){
+			&>div{
+				background: #ff5165;
+			}
+		}
+		&:nth-of-type(3){
+			&>div{
+				background: #2fa3f4;
+			}
+		}
+		&:nth-of-type(4){
+			&>div{
+				background: #9e6eee;
+			}
+		}
+	}
+}
+
+.ad{
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	div{
+		width: 50%;
+		overflow: hidden;
+		height: 4.466667rem;
+		img{
+			display: block;
+			border: 1px solid @borderColor;
+			width: 100%;
+		}
+	}
+	.imgLeft{
+		img{
+			height: 50%;
+		}
+	}
+	.imgRight{
+		img{
+			height: 100%;
+		}
+	}
+}
+
+.index-title{
+	height: 0.933333rem;
+	padding-left: 28px;
+	line-height: 0.933333rem;
+	.px2px(14px);
+	color: @textColor;
+	border-top: 1px solid @borderColor;
+	span{
+		display: inline-block;
+		margin-right: 0.133333rem;
+		color: @mainColor;
+		font-size: 0.533333rem;
+	}
+}
+.flagship{
+	width: 100%;
+	overflow: hidden;
+	margin: 0.266667rem 0;
+	background: #fff;
+	.ship{
+		width: 100%;
+		overflow: hidden;
+		div{
+			height: 2.8rem;
+			img{
+				border-right: 1px solid @borderColor;
+				border-bottom: 1px solid @borderColor;
+			}
+		}
+	}
+	.shipBig{
+		width: 3.1rem;
+		height: 100%;
+		img{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.shipLittle{
+		width: 6.9rem;
+		height: 100%;
+		img{
+			display: block;
+			width: 33.33%;
+			height: 100%;
+			float: left;
+		}
+	}
+}
+
+
+
+.them{
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	img{
+		border-right: 1px solid @borderColor;
+		border-bottom: 1px solid @borderColor;
+		float: left;
+	}
+	.themTop{
+		width: 100%;
+		overflow: hidden;
+		img{
+			width: 50%;
+			height: 2.92rem;
+		}
+	}
+	.themBottom{
+		width: 100%;
+		overflow: hidden;
+		img{
+			width: 25%;
+			height: 2.92rem;
+		}
+	}
+}
+
+.like{
+	background: #fff;
+	overflow: hidden;
+	margin: 0.266667rem 0;
+	padding-bottom: 0.373333rem;
+	.likeList{
+		width: 4.453333rem;
+		overflow: hidden;
+		img{
+			display: block;
+			width: 100%;
+			height: 3.666667rem;
+			border: 1px solid @borderColor;
+		}
+		p{
+			.px2px(12px);
+			padding-top: 0.266667rem;
+			color: @textColor;
+		}
+		&:nth-of-type(1){
+			float: left;
+		}
+		&:nth-of-type(2){
+			float: right;
+		}
+		span{
+			display: inline-block;
+			.px2px(12px);
+			padding-top: 0.266667rem;
+			color: #eb4d22;
+		}
+	}
+}
+
+
+#wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+#scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}

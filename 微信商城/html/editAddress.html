@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="../public/flexible.js"></script>
+    <title>编辑/新增收货地址</title>
+    <link rel="stylesheet" type="text/css" href="../fonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../css/editAddress.css">
+    <link rel="stylesheet" type="text/css" href="../css/LArea.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header padded clearfix cHeader">
+        <span class="iconfont">&#xe604;</span>
+        <h3 class="tiltle"></h3>
+        <span class="iconfont fr">保存</span>
+    </div>
+    <div class="container" id="container">
+        <ul class="uList">
+            <li class="clearfix">
+                <div class="title">收货人</div>
+                <input type="text" placeholder="填写收货人姓名" />
+            </li>
+            <li class="clearfix">
+                <div class="title">联系电话</div>
+                <input type="text" placeholder="填写收货人姓名" />
+            </li>
+            <li class="clearfix">
+                <div class="title">所在地区</div>
+                <input type="text" id="areaSelect" placeholder="城市选择" />
+                <input id="areaSelect2" type="hidden" />
+            </li>
+        </ul>
+        <div class="detailAdrress">
+            <p>详细地址</p>
+            <textarea placeholder="填写街道, 楼道, 门牌号"></textarea>
+        </div>
+    </div>
+    <!-- 弹出框 -->
+    <div class="popup" style="display: none">
+        <div class="pupopConten" id="city">
+            <p>选择所在地区</p>
+            <p>省份<span class="selectText" id="provStr">请选择</span><select class="prov"></select></p>
+            <p>城市<span class="selectText" id="cityStr">请选择</span><select class="city" disabled="disabled"></select></p>
+            <p>区县<span class="selectText" id="distStr">请选择</span><select class="dist" disabled="disabled"></select></p>
+            <p class="btnBox">
+                <span id="sure">确定</span>
+                <span id="cancel">取消</span>
+            </p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../public/jquery.min.js"></script>
+<script type="text/javascript" src="../public/LAreaData2.js"></script>
+<script type="text/javascript" src="../public/LArea.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var area2 = new LArea();
+        area2.init({
+            'trigger': '#areaSelect',
+            'valueTo': '#areaSelect2',
+            'keys': {
+                id: 'value',
+                name: 'text'
+            },
+            'type': 2,
+            'data': [provs_data, citys_data, dists_data]
+        });
+    })
+</script>
+</html>
